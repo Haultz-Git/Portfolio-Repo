@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Link } from 'lucide-react';
 
 const projects = [
   {
@@ -8,15 +8,18 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     tags: ['React', 'Node.js', 'Unity', 'Swift', 'IAP'],
     github: 'https://github.com',
-    demo: 'https://example.com'
+    demo: 'https://example.com',
+    link: 'https://example.com'
+
   },
   {
     title: 'Christmas Tower Defense',
     description: 'Defend Santa’s tower from a zombie horde in Christmas Tower Defense! Answer festive trivia to stop the attacks in this fun tower defence 2d Game from ChimpVine. It’s the perfect holiday challenge for the whole family.',
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/Assets/Images/Projects/TowerDefense.png',
     tags: ['Unity', 'C#', 'Game Development', '2D'],
     github: 'https://github.com',
-    demo: 'https://example.com'
+    demo: 'https://example.com',
+    link: 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'
   },
   {
     title: 'AI Content Generator',
@@ -24,7 +27,8 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     tags: ['React', 'OpenAI API', 'Express', 'Redis'],
     github: 'https://github.com',
-    demo: 'https://example.com'
+    demo: 'https://example.com',
+    link: 'https://example.com'
   }
 ];
 
@@ -77,20 +81,12 @@ export default function Projects() {
                 </div>
                 <div className="flex items-center gap-4">
                   <a 
-                    href={project.github} 
+                    href={project.link} 
                     target="_blank" 
                     rel="noreferrer"
                     className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-medium"
                   >
-                    <Github size={16} /> Code
-                  </a>
-                  <a 
-                    href={project.demo} 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-medium"
-                  >
-                    <ExternalLink size={16} /> Live Demo
+                    <Link size={16} /> Link
                   </a>
                 </div>
               </div>
