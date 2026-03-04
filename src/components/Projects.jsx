@@ -4,7 +4,7 @@ import { Link } from 'lucide-react';
 const projects = [
   {
     title: 'Merge Explorer',
-    description: 'A full-stack e-commerce solution with payment integration, user authentication, and an admin dashboard.',
+    description: 'Merge Explorer is an educational augmented-reality app that brings science to life by letting users explore over 100 interactive 3D STEM simulations—like planets, volcanoes, and the human body—by holding and interacting with virtual objects (often using a Merge Cube) on their device. It’s designed to make complex science concepts tangible and engaging for students in classroom or home learning.',
     image: '/Assets/Images/Projects/Explorer.png',
     tags: ['React', 'Node.js', 'Unity', 'Swift', 'IAP'],
     github: 'https://github.com',
