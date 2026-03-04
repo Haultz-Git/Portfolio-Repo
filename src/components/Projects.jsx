@@ -1,15 +1,17 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Link } from 'lucide-react';
+import { Link } from 'lucide-react';
 
 const projects = [
   {
     title: 'Merge Explorer',
     description: 'A full-stack e-commerce solution with payment integration, user authentication, and an admin dashboard.',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/Assets/Images/Projects/Explorer.png',
     tags: ['React', 'Node.js', 'Unity', 'Swift', 'IAP'],
     github: 'https://github.com',
     demo: 'https://example.com',
-    link: 'https://example.com'
+    links: {iOS : 'https://apps.apple.com/us/app/merge-explorer/id1453098606' , 
+            Android : 'https://play.google.com/store/apps/details?id=com.MergeCube.EDUExplorer&hl=en_US',
+            Microsoft : 'https://apps.microsoft.com/detail/9nz3ss7dpkwf?hl=en-US&gl=US'}
 
   },
   {
@@ -19,7 +21,8 @@ const projects = [
     tags: ['Unity', 'C#', 'Game Development', '2D'],
     github: 'https://github.com',
     demo: 'https://example.com',
-    link: 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'
+    // links: {iOS : 'https://example.com' , Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
+    links: {Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
   },
   {
     title: 'AI Content Generator',
@@ -28,7 +31,7 @@ const projects = [
     tags: ['React', 'OpenAI API', 'Express', 'Redis'],
     github: 'https://github.com',
     demo: 'https://example.com',
-    link: 'https://example.com'
+    links: {iOS : 'https://example.com' , Android : 'https://example.com'}
   }
 ];
 
@@ -80,14 +83,18 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex items-center gap-4">
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-medium"
-                  >
-                    <Link size={16} /> Link
-                  </a>
+                  {Object.entries(project.links).map(([name, url]) => (
+                    <a
+                      key={name}
+                      href={url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-medium"
+                    >
+                      <Link size={16} />
+                      {name}
+                    </a>
+                  ))}
                 </div>
               </div>
             </motion.div>
