@@ -23,15 +23,6 @@ const projects = [
     demo: 'https://example.com',
     // links: {iOS : 'https://example.com' , Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
     links: {Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
-  },
-  {
-    title: 'AI Content Generator',
-    description: 'An AI-powered application that generates blog posts, social media content, and marketing copy using OpenAI.',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    tags: ['React', 'OpenAI API', 'Express', 'Redis'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    links: {iOS : 'https://example.com' , Android : 'https://example.com'}
   }
 ];
 
