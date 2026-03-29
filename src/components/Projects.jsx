@@ -17,13 +17,12 @@ const projects = [
   {
     title: 'Unity-AI Assistant',
     description: 'Built an interactive Unity application featuring a 3D AI-powered NPC capable of natural language conversation.',
-    image: '/Assets/Images/Projects/TowerDefense.png',
+    image: '/Assets/Images/Projects/AIAssistant.png',
     tags: ['Unity', 'C#', 'LLM Integration', 'Whisper STT', 'TTS'],
     //github: 'https://github.com',
     //demo: 'https://example.com',
-    // links: {iOS : 'https://example.com' , Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
-    links: {Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
-  },
+    links: {}
+    },
   {
     title: 'Christmas Tower Defense',
     description: 'Defend Santa’s tower from a zombie horde in Christmas Tower Defense! Answer festive trivia to stop the attacks in this fun tower defence 2d Game from ChimpVine. It’s the perfect holiday challenge for the whole family.',
@@ -31,19 +30,17 @@ const projects = [
     tags: ['Unity', 'C#', 'Game Development', '2D'],
     //github: 'https://github.com',
     //demo: 'https://example.com',
-    // links: {iOS : 'https://example.com' , Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
-    links: {Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
-  },
+    links: {iOS : 'https://example.com' , Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
+    },
   {
     title: 'VR Photo Gallery',
     description: 'Built an interactive VR gallery in Unity where users can walk through a virtual room to view images. Implemented runtime image loading, allowing photos to be uploaded and updated without rebuilding the application.',
-    image: '/Assets/Images/Projects/TowerDefense.png',
+    image: '/Assets/Images/Projects/VRGallery.png',
     tags: ['Unity', 'XRToolkit','VR'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    // links: {iOS : 'https://example.com' , Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
-    links: {Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
-  }
+    //github: 'https://github.com',
+    //demo: 'https://example.com',
+    links: {}
+    }
 ];
 
 export default function Projects() {
