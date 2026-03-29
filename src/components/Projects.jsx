@@ -2,23 +2,43 @@ import { motion } from 'framer-motion';
 import { Link } from 'lucide-react';
 
 const projects = [
-  {
-    title: 'Merge Explorer',
-    description: 'Merge Explorer is an educational augmented-reality app that brings science to life by letting users explore over 100 interactive 3D STEM simulations—like planets, volcanoes, and the human body—by holding and interacting with virtual objects (often using a Merge Cube) on their device. It’s designed to make complex science concepts tangible and engaging for students in classroom or home learning.',
-    image: '/Assets/Images/Projects/Explorer.png',
-    tags: ['React', 'Node.js', 'Unity', 'Swift', 'IAP'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    links: {iOS : 'https://apps.apple.com/us/app/merge-explorer/id1453098606' , 
-            Android : 'https://play.google.com/store/apps/details?id=com.MergeCube.EDUExplorer&hl=en_US',
-            Microsoft : 'https://apps.microsoft.com/detail/9nz3ss7dpkwf?hl=en-US&gl=US'}
+  // {
+  //   title: 'Merge Explorer',
+  //   description: 'Merge Explorer is an educational augmented-reality app that brings science to life by letting users explore over 100 interactive 3D STEM simulations—like planets, volcanoes, and the human body—by holding and interacting with virtual objects (often using a Merge Cube) on their device. It’s designed to make complex science concepts tangible and engaging for students in classroom or home learning.',
+  //   image: '/Assets/Images/Projects/Explorer.png',
+  //   tags: ['React', 'Node.js', 'Unity', 'Swift', 'IAP'],
+  //   github: 'https://github.com',
+  //   demo: 'https://example.com',
+  //   // links: {iOS : 'https://apps.apple.com/us/app/merge-explorer/id1453098606' , 
+  //   //         Android : 'https://play.google.com/store/apps/details?id=com.MergeCube.EDUExplorer&hl=en_US',
+  //   //         Microsoft : 'https://apps.microsoft.com/detail/9nz3ss7dpkwf?hl=en-US&gl=US'}
 
+  // },
+  {
+    title: 'Unity-AI Assistant',
+    description: 'Built an interactive Unity application featuring a 3D AI-powered NPC capable of natural language conversation.',
+    image: '/Assets/Images/Projects/TowerDefense.png',
+    tags: ['Unity', 'C#', 'LLM Integration', 'Whisper STT', 'TTS'],
+    //github: 'https://github.com',
+    //demo: 'https://example.com',
+    // links: {iOS : 'https://example.com' , Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
+    links: {Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
   },
   {
     title: 'Christmas Tower Defense',
     description: 'Defend Santa’s tower from a zombie horde in Christmas Tower Defense! Answer festive trivia to stop the attacks in this fun tower defence 2d Game from ChimpVine. It’s the perfect holiday challenge for the whole family.',
     image: '/Assets/Images/Projects/TowerDefense.png',
     tags: ['Unity', 'C#', 'Game Development', '2D'],
+    //github: 'https://github.com',
+    //demo: 'https://example.com',
+    // links: {iOS : 'https://example.com' , Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
+    links: {Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
+  },
+  {
+    title: 'VR Photo Gallery',
+    description: 'Built an interactive VR gallery in Unity where users can walk through a virtual room to view images. Implemented runtime image loading, allowing photos to be uploaded and updated without rebuilding the application.',
+    image: '/Assets/Images/Projects/TowerDefense.png',
+    tags: ['Unity', 'XRToolkit','VR'],
     github: 'https://github.com',
     demo: 'https://example.com',
     // links: {iOS : 'https://example.com' , Android : 'https://play.google.com/store/apps/details?id=com.Chimpvine.TowerDefense&hl=en'}
