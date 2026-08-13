@@ -1,34 +1,61 @@
 import { motion } from 'framer-motion';
-import info from '../assets/Info.TS';
+import { fullName } from '../assets/Info.TS';
+
+const navLinks = [
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#stack', label: 'Stack' },
+  { href: '#projects', label: 'Projects' },
+];
 
 export default function Header() {
+  const initials = fullName
+    .split(' ')
+    .map((part) => part[0])
+    .join('')
+    .toUpperCase();
+
   return (
-    <motion.header 
+    <motion.header
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800"
+      className="sticky top-0 z-40 border-b-2 border-line bg-void/82 backdrop-blur-md"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <a href="#" className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-              {info.brandName}
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5 px-4 py-3.5 sm:px-6 lg:px-8">
+        <a href="#top" className="flex items-center gap-3 text-ink">
+          <span
+            className="flex h-[34px] w-[34px] items-center justify-center bg-pink font-pixel text-[13px] text-void"
+            style={{
+              boxShadow:
+                '0 -4px 0 0 #ff2e88, 0 4px 0 0 #ff2e88, -4px 0 0 0 #ff2e88, 4px 0 0 0 #ff2e88, 0 0 18px rgba(255,46,136,0.65)',
+            }}
+          >
+            {initials}
+          </span>
+          <span className="font-pixel text-[15px] tracking-wide" style={{ textShadow: '0 0 14px rgba(46,230,246,0.55)' }}>
+            {fullName.split(' ')[0].toUpperCase()}
+            <span className="text-cyan">.DEV</span>
+          </span>
+        </a>
+        <nav aria-label="Sections" className="flex flex-wrap items-center gap-2">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="px-3 py-2.5 font-pixel text-[10px] tracking-wide text-ink-muted transition-colors hover:bg-yellow/10 hover:text-yellow"
+            >
+              {link.label.toUpperCase()}
             </a>
-          </div>
-          <nav className="hidden md:block">
-            <ul className="flex space-x-8">
-              <li><a href="#about" className="text-slate-300 hover:text-white transition-colors">About</a></li>
-              <li><a href="#skills" className="text-slate-300 hover:text-white transition-colors">Skills</a></li>
-              <li><a href="#projects" className="text-slate-300 hover:text-white transition-colors">Projects</a></li>
-            </ul>
-          </nav>
-          <div>
-            <a href="#contact" className="px-4 py-2 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-colors">
-              Contact Me
-            </a>
-          </div>
-        </div>
+          ))}
+          <a
+            href="#contact"
+            className="px-3.5 py-2.5 font-pixel text-[10px] tracking-wide text-void transition-colors hover:bg-yellow"
+            style={{ background: '#2ee6f6', boxShadow: '0 0 16px rgba(46,230,246,0.45)' }}
+          >
+            CONTACT
+          </a>
+        </nav>
       </div>
     </motion.header>
   );
