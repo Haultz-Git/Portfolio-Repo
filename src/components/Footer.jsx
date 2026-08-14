@@ -54,6 +54,14 @@ export default function Footer() {
             </span>
           </div>
           <div className="flex gap-2.5">
+            <button
+              type="button"
+              onClick={copyEmail}
+              className="border-2 border-line px-3.5 py-3 font-pixel text-[10px] text-ink-muted transition-colors hover:border-yellow hover:text-yellow"
+              aria-label="Copy email"
+            >
+              <span aria-live="polite">{copied ? 'COPIED' : 'COPY EMAIL'}</span>
+            </button>
             <a
               href={info.socialLinks.github}
               target="_blank"
@@ -72,14 +80,6 @@ export default function Footer() {
             >
               <Linkedin size={16} />
             </a>
-            <button
-              type="button"
-              onClick={copyEmail}
-              className="border-2 border-line px-3.5 py-3 font-pixel text-[10px] text-ink-muted transition-colors hover:border-yellow hover:text-yellow"
-              aria-label="Copy email"
-            >
-              <span aria-live="polite">{copied ? 'COPIED' : 'COPY EMAIL'}</span>
-            </button>
           </div>
         </div>
       </div>

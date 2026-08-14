@@ -1,8 +1,15 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
 import info, { fullName } from '../assets/Info.TS';
 
 export default function Hero() {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    if (navigator.clipboard) navigator.clipboard.writeText(info.email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1600);
+  };
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -41,7 +48,7 @@ export default function Hero() {
           >
             {fullName.toUpperCase()}
           </motion.p>
-
+ 
           <motion.h1
             variants={itemVariants}
             className="animate-flicker-glow mb-6.5 text-balance font-pixel text-[clamp(26px,4.6vw,52px)] leading-[1.42] text-ink"
@@ -50,9 +57,9 @@ export default function Hero() {
                 '3px 3px 0 rgba(255,46,136,0.55), -2px -2px 0 rgba(46,230,246,0.35), 0 0 40px rgba(255,46,136,0.25)',
             }}
           >
-            I BUILD WORLDS
+            I build <span className="text-pink text-[50px]">WORLDS</span> and <span className="text-pink  text-[50px]">SYSTEMS</span>
             <br />
-            YOU CAN PLAY.
+            You can <span className="text-pink  text-[50px]">Interact </span>with.
           </motion.h1>
 
           <motion.p variants={itemVariants} className="mb-4 max-w-[56ch] text-pretty text-[17px] leading-[1.7] text-ink-body">
@@ -93,12 +100,12 @@ export default function Hero() {
             >
               LINKEDIN ↗
             </a>
-            <a
-              href={`mailto:${info.email}`}
-              className="font-mono text-[13px] tracking-wide text-ink-muted transition-colors hover:text-pink"
+            <button
+              onClick={copyEmail}
+              className="font-mono text-[13px] tracking-wide text-ink-muted transition-colors hover:text-pink cursor-pointer bg-none border-none p-0"
             >
-              EMAIL ↗
-            </a>
+              {copied ? 'COPIED!' : 'EMAIL ↗'}
+            </button>
           </motion.div>
         </div>
 
@@ -114,7 +121,7 @@ export default function Hero() {
             >
               <div className="mb-3 flex items-center justify-between font-pixel text-[9px] tracking-wide text-yellow">
                 <span>SELECT CHARACTER</span>
-                <span className="text-pink">LV.99</span>
+                <span className="text-pink">LV.10</span>
               </div>
               <div
                 className="relative flex aspect-square w-full items-center justify-center"
